@@ -20,8 +20,9 @@ cd metabolite-pathway-review-docker
 docker-compose build metabolomics_benchmark-base
 
 # build method image
-docker-compose build < _method-name_ >
+docker-compose build <method-name>
 
 # run the method image
-docker-compose run < *method-name* > bash
+docker-compose run <method-name> bash
 ```
+**NOTE**: Users are free to replace `<method-name>` with one of the following tool names: `fella`, `lilikoi`, `metabolyzer`, `metax`, `mummichog`, `metaboanalyst`, `papi`, `puma`, `sspa`, `mbpls`, `ogpls`, `imsea`, or `dcimsea`.
