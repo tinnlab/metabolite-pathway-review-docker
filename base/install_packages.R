@@ -1,0 +1,8 @@
+install.packages("Rcpp")
+install.packages("Rcpp11")
+install.packages("progress")
+install.packages('haven')
+install.packages("readxl", type = "source")
+install.packages("readr", type = "source")
+install.packages("tidyverse")
+install.packages("BiocManager")

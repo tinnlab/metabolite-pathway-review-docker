@@ -1,0 +1,6 @@
+install.packages("gplots")
+install.packages("kernlab")
+install.packages("MASS")
+install.packages("fastICA")
+install.packages("ICSNP")
+install.packages("mvnormtest")

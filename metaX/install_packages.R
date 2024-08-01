@@ -1,0 +1,5 @@
+BiocManager::install("qvalue")
+BiocManager::install("limma")
+install.packages("./SSPA_2.10.0.tar.gz", repos = NULL, type="source")
+install.packages("./DiscriMiner_0.1-29.tar.gz", repos = NULL, type="source")
+BiocManager::install("wenbostar/metaX")

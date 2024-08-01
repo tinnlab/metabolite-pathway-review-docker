@@ -1,0 +1,131 @@
+services:
+  base:
+    platform: linux/amd64
+    build:
+      context: ./base
+      dockerfile: Dockerfile
+    image: metabolomics_benchmark-base:latest
+
+  fella:
+    platform: linux/amd64
+    build:
+      context: ./FELLA
+      dockerfile: Dockerfile
+    image: fella:latest
+    volumes:
+      - ./FELLA:/code 
+
+  lilikoi:
+    platform: linux/amd64
+    build:
+      context: ./Lilikoi
+      dockerfile: Dockerfile
+    image: lilikoi:latest
+    volumes:
+      - ./Lilikoi:/code 
+
+  metabolyzer:
+    platform: linux/amd64
+    build:
+      context: ./MetaboLyzer
+      dockerfile: Dockerfile
+    image: metabolyzer:latest
+    volumes:
+      - ./MetaboLyzer:/code 
+
+  metax:
+    platform: linux/amd64
+    build:
+      context: ./metaX
+      dockerfile: Dockerfile
+    image: metax:latest
+    volumes:
+      - ./metaX:/code 
+
+  mummichog:
+    platform: linux/amd64
+    build:
+      context: ./mummichog
+      dockerfile: Dockerfile
+    image: mummichog:latest
+    volumes:
+      - ./mummichog:/code 
+
+  metaboanalyst:
+    platform: linux/amd64
+    build:
+      context: ./MetaboAnalyst
+      dockerfile: Dockerfile
+    image: metaboanalyst:latest
+    volumes:
+      - ./MetaboAnalyst:/code 
+
+  papi:
+    platform: linux/amd64
+    build:
+      context: ./PAPi
+      dockerfile: Dockerfile
+    image: papi:latest
+    volumes:
+      - ./PAPi:/code 
+
+  puma:
+    platform: linux/amd64
+    build:
+      context: ./PUMA
+      dockerfile: Dockerfile
+    image: puma:latest
+    volumes:
+      - ./PUMA:/code 
+
+  sspa:
+    platform: linux/amd64
+    build:
+      context: ./ssPA
+      dockerfile: Dockerfile
+    image: sspa:latest
+    volumes:
+      - ./ssPA:/code 
+
+  mbpls:
+    platform: linux/amd64
+    build:
+      context: ./MBPLS
+      dockerfile: Dockerfile
+    network_mode: host     
+    image: mbpls:latest
+    volumes:
+      - ./MBPLS:/code
+
+  ogpls:
+    platform: linux/amd64
+    build:
+      context: ./ogPLS
+      dockerfile: Dockerfile
+    network_mode: host     
+    image: ogpls:latest
+    volumes:
+      - ./ogPLS:/code
+    environment:
+      - MATLAB_JAVA=-Xmx4g
+
+  imsea:
+    platform: linux/amd64
+    build:
+      context: ./iMSEA
+      dockerfile: Dockerfile
+    network_mode: host     
+    image: imsea:latest
+    volumes:
+      - ./iMSEA:/code
+
+  dcimsea:
+    platform: linux/amd64
+    build:
+      context: ./dciMSEA
+      dockerfile: Dockerfile
+    image: dcimsea:latest
+    volumes:
+      - ./dciMSEA:/code
+
+

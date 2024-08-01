@@ -1,0 +1,79 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/metabolomics_benchmark-base:latest
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 90B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/metabolomics_benchmark-base:latest
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 1.07kB done
+#5 DONE 0.0s
+
+#6 [2/6] RUN apt-get update &&     apt-get install -y --no-install-recommends     ca-certificates     wget     unzip     sudo     libx11-6     procps &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#6 0.292 Get:1 https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease [3626 B]
+#6 0.329 Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 0.459 Get:3 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 0.599 Err:1 https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease
+#6 0.599   At least one invalid signature was encountered.
+#6 0.872 Err:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+#6 0.872   At least one invalid signature was encountered.
+#6 1.004 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 1.135 Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 1.177 Err:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+#6 1.177   At least one invalid signature was encountered.
+#6 1.442 Err:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+#6 1.442   At least one invalid signature was encountered.
+#6 1.709 Err:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+#6 1.709   At least one invalid signature was encountered.
+#6 1.731 Reading package lists...
+#6 1.771 W: GPG error: https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease: At least one invalid signature was encountered.
+#6 1.771 E: The repository 'https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease' is not signed.
+#6 1.771 W: GPG error: http://security.ubuntu.com/ubuntu jammy-security InRelease: At least one invalid signature was encountered.
+#6 1.771 E: The repository 'http://security.ubuntu.com/ubuntu jammy-security InRelease' is not signed.
+#6 1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy InRelease: At least one invalid signature was encountered.
+#6 1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy InRelease' is not signed.
+#6 1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy-updates InRelease: At least one invalid signature was encountered.
+#6 1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy-updates InRelease' is not signed.
+#6 1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy-backports InRelease: At least one invalid signature was encountered.
+#6 1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy-backports InRelease' is not signed.
+#6 ERROR: process "/bin/sh -c apt-get update &&     apt-get install -y --no-install-recommends     ca-certificates     wget     unzip     sudo     libx11-6     procps &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [2/6] RUN apt-get update &&     apt-get install -y --no-install-recommends     ca-certificates     wget     unzip     sudo     libx11-6     procps &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*:
+1.771 W: GPG error: https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease: At least one invalid signature was encountered.
+1.771 E: The repository 'https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease' is not signed.
+1.771 W: GPG error: http://security.ubuntu.com/ubuntu jammy-security InRelease: At least one invalid signature was encountered.
+1.771 E: The repository 'http://security.ubuntu.com/ubuntu jammy-security InRelease' is not signed.
+1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy InRelease: At least one invalid signature was encountered.
+1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy InRelease' is not signed.
+1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy-updates InRelease: At least one invalid signature was encountered.
+1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy-updates InRelease' is not signed.
+1.771 W: GPG error: http://archive.ubuntu.com/ubuntu jammy-backports InRelease: At least one invalid signature was encountered.
+1.771 E: The repository 'http://archive.ubuntu.com/ubuntu jammy-backports InRelease' is not signed.
+------
+Dockerfile:7
+--------------------
+   6 |     # Install necessary dependencies
+   7 | >>> RUN apt-get update && \
+   8 | >>>     apt-get install -y --no-install-recommends \
+   9 | >>>     ca-certificates \
+  10 | >>>     wget \
+  11 | >>>     unzip \
+  12 | >>>     sudo \
+  13 | >>>     libx11-6 \
+  14 | >>>     procps && \
+  15 | >>>     apt-get clean && \
+  16 | >>>     rm -rf /var/lib/apt/lists/*
+  17 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c apt-get update &&     apt-get install -y --no-install-recommends     ca-certificates     wget     unzip     sudo     libx11-6     procps &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/bxa4d3ty4yt0nifwn6csboukt
