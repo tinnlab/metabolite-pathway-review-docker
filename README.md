@@ -20,7 +20,7 @@ cd metabolite-pathway-review-docker
 docker-compose build metabolomics_benchmark-base
 
 # build method image
-docker-compose build < *method-name* >
+docker-compose build < _method-name_ >
 
 # run the method image
 docker-compose run < *method-name* > bash
