@@ -17,7 +17,7 @@ cd metabolite-pathway-review-docker
 **Step 2:** To build the docker image for a method of your interest, please run the following command:
 ```
 # build base image first
-docker-compose build metabolomics_benchmark-base
+docker-compose build base
 
 # build a certain method image
 docker-compose build <method-name>
