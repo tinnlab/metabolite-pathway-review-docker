@@ -5,7 +5,7 @@ This repository hosts Dockerfiles for all non-web-based methods covered in the r
 # QUICK START
 Users should make sure they have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed already.
 
-**Step 1:** we need to clone this repository and place it in a folder in our local machine
+**Step 1:** Clone this repository and save it to a folder on your local machine
 ```
 # If you are users with a Linux/MAC computer, open your terminal
 # If you are users with a Windows computer, open your Windows Powershell
