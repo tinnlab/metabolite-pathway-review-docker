@@ -29,6 +29,6 @@ docker-compose run --rm <method-name> bash
 
 + Users are free to replace `<method-name>` with one of the following tool names: `fella`, `lilikoi`, `metabolyzer`, `metax`, `mummichog`, `metaboanalyst`, `papi`, `puma`, `sspa`, `mbpls`, `ogpls`, `imsea`, or `dcimsea`.
 
-+ We **DO NOT** recommend users to build all method images in one shot (`docker-compose build`) because it will drain your memory. Just build one tool at a time, and remove it (`docker rmi <method-name>`) before coming to another tool.
++ We **DO NOT** recommend users to build all method images at once using `docker-compose build` as it can deplete your memory. Instead, build one tool at a time and remove it (`docker rmi <method-name>`) before proceeding to the next tool.
 
 + For methods that require MATLAB to run (`MB-PLS`, `iMSEA`, and `ogPLS`), Please visit the [Matlab license center](https://www.mathworks.com/licensecenter/licenses) to obtain the `license.lic` file beforehand. The hostid of this license is the same as the hostid of the host machine. If docker is used, the user of this license must be root. After you had that license file, place it in the `license` sub-folder in the respective folder (i.e., `MBPLS/license`, `iMSEA/license`, or `ogPLS/license`).
