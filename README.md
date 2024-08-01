@@ -1,6 +1,6 @@
-# A Review on Functional Analysis Tools For Metabolites (Docker Images)
+# Functional Analysis Tools For Metabolites: A Review (Docker Images)
 
-This repository contains Dockerfiles for all methods in the review work on functional analysis on metabolomics data
+This repository includes Dockerfiles for all methods discussed in the review on functional analysis of metabolomics data
 
 # QUICK START
 Users should make sure they have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed already.
@@ -20,8 +20,8 @@ cd metabolite-pathway-review-docker
 docker-compose build metabolomics_benchmark-base
 
 # build method image
-docker-compose build <*method-name*>
+docker-compose build < *method-name* >
 
 # run the method image
-docker-compose run <*method-name*> bash
+docker-compose run < *method-name* > bash
 ```
